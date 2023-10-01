@@ -149,8 +149,8 @@
     <ClCompile Include="..\..\..\tomolatoon\module\viewport\tomolatoon.iframe.ixx" />
     <ClCompile Include="..\..\..\tomolatoon\module\viewport\tomolatoon.iframe.units.ixx" />
     <ClCompile Include="..\..\..\tomolatoon\module\BudouX\tomolatoon.BudouX.ixx" />
-    <ClCompile Include="..\..\..\tomolatoon\module\drag_state\tomolatoon.drag_tracker.ixx" />
     <ClCompile Include="..\..\..\tomolatoon\module\expression_template\tomolatoon.expression_template.ixx" />
+    <ClCompile Include="..\..\..\tomolatoon\module\drag_tracker\tomolatoon.drag_tracker.ixx" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="App\icon.ico">
