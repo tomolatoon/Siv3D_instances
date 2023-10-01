@@ -146,11 +146,11 @@
     </ClCompile>
     <ClCompile Include="..\..\..\tomolatoon\module\lerp_transition\tomolatoon.lerp_transition.ixx" />
     <ClCompile Include="..\..\..\tomolatoon\module\utility\tomolatoon.utility.ixx" />
-    <ClCompile Include="..\..\..\tomolatoon\module\viewport\tomolatoon.iframe.ixx" />
-    <ClCompile Include="..\..\..\tomolatoon\module\viewport\tomolatoon.iframe.units.ixx" />
     <ClCompile Include="..\..\..\tomolatoon\module\BudouX\tomolatoon.BudouX.ixx" />
     <ClCompile Include="..\..\..\tomolatoon\module\expression_template\tomolatoon.expression_template.ixx" />
     <ClCompile Include="..\..\..\tomolatoon\module\drag_tracker\tomolatoon.drag_tracker.ixx" />
+    <ClCompile Include="..\..\..\tomolatoon\module\iframe\tomolatoon.iframe.ixx" />
+    <ClCompile Include="..\..\..\tomolatoon\module\iframe\tomolatoon.iframe.units.ixx" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="App\icon.ico">
