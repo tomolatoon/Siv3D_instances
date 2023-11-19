@@ -1,13 +1,10 @@
-﻿module;
-#include <concepts>
+﻿#include <concepts>
 #include <type_traits>
 #include <utility>
 
 #include <Siv3D.hpp>
 
-export module tomolatoon.iframe;
-
-export namespace tomolatoon
+namespace tomolatoon
 {
 	template <class T>
 	concept HasMovedBy = requires (const T& t) {
@@ -78,7 +75,7 @@ namespace s3d::Arg
 	SIV3D_NAMED_PARAMETER(local);
 } // namespace s3d::Arg
 
-export namespace tomolatoon
+namespace tomolatoon
 {
 	/// @brief 新しい Iframe/シザー矩形 領域が現在の Iframe/シザー矩形 領域と交差していない場合に、例外を投げるかどうかを設定するフラグ
 	using ForceNextIntersectCurrent = YesNo<struct ForceNextIntersectCurrentTag>;

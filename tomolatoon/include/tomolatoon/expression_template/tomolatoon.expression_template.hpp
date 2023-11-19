@@ -1,6 +1,4 @@
-export module tomolatoon.expression_template;
-
-export namespace tomolatoon
+namespace tomolatoon
 {
 	template <class L, template <class, class> class Op, class R>
 	struct Expression

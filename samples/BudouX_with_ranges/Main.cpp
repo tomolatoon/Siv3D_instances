@@ -5,15 +5,17 @@
 
 import tomolatoon.BudouX;
 
-void Main()
-{
-	const auto parser = tomolatoon::BudouXParser::Download(U"https://raw.githubusercontent.com/google/budoux/main/budoux/models/ja.json");
+void Main() {
+	const auto parser = tomolatoon::BudouXParser::Download(
+		U"https://raw.githubusercontent.com/google/budoux/main/budoux/models/ja.json"
+	);
 
 	const Font font{FontMethod::MSDF, 48};
 
 	TextAreaEditState textAreaState{
 		U"Siv3D（シブスリーディー）は、音や画像、AI を使ったゲームやアプリを、"
-		U"モダンな C++ コードで楽しく簡単にプログラミングできるオープンソースのフレームワークです。"};
+		U"モダンな C++ コードで楽しく簡単にプログラミングできるオープンソースのフレームワークです。"
+	};
 
 	double fontSizeSlider = 0.4;
 
@@ -22,9 +24,7 @@ void Main()
 	while (System::Update())
 	{
 		if (SimpleGUI::TextArea(textAreaState, Vec2{30, 20}, SizeF{740, 100}))
-		{
-			textAreaState.text = textAreaState.text.removed(U'\n');
-		}
+		{ textAreaState.text = textAreaState.text.removed(U'\n'); }
 
 		SimpleGUI::Slider(U"Font size", fontSizeSlider, Vec2{30, 130}, 100, 200);
 		const double fontSize = (fontSizeSlider * 80 + 16);

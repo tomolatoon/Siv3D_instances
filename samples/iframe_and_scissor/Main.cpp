@@ -5,13 +5,12 @@
 
 import tomolatoon.iframe;
 
-void Main()
-{
+void Main() {
 	// tomolatoon::Iframe ではなく Iframe と書いても大丈夫にする
 	using tomolatoon::Iframe;
 
 	Window::Resize(1'755, 810, Centering::Yes);
-	//Scene::SetResizeMode(ResizeMode::Actual);
+	// Scene::SetResizeMode(ResizeMode::Actual);
 	Scene::SetBackground(Color(U"#B8C9CD"));
 
 	while (System::Update())

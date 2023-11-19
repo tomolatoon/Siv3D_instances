@@ -1,13 +1,8 @@
-﻿module;
-#include <ranges>
-
+﻿#include <ranges>
 #include <Siv3D.hpp>
-
 #include "rivet.hpp"
 
-export module tomolatoon.BudouX;
-
-export namespace tomolatoon
+namespace tomolatoon
 {
 	struct BudouXParser
 	{
@@ -520,7 +515,7 @@ namespace tomolatoon::detail
 	};
 } // namespace tomolatoon::detail
 
-export namespace tomolatoon
+namespace tomolatoon
 {
 	inline constexpr detail::BudouXBreakAdaptor BudouXBreak;
 } // namespace tomolatoon

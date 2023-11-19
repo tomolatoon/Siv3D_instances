@@ -1,9 +1,6 @@
-﻿module;
-#include <Siv3D.hpp>
+﻿#include <Siv3D.hpp>
 
-export module tomolatoon.drag_tracker;
-
-export namespace tomolatoon
+namespace tomolatoon
 {
 	/// @brief ドラッグの状態を追跡するクラス
 	/// @details ドラッグの状態及び、開始位置と終了位置を追跡する

@@ -5,10 +5,9 @@
 
 import tomolatoon.drag_tracker;
 
-void Main()
-{
+void Main() {
 	Window::Resize(1'755, 810, Centering::Yes);
-	//Scene::SetResizeMode(ResizeMode::Actual);
+	// Scene::SetResizeMode(ResizeMode::Actual);
 	Scene::SetBackground(Color(U"#B8C9CD"));
 
 	// ドラッグの状態を追跡するクラスのインスタンスを生成
@@ -29,9 +28,7 @@ void Main()
 
 			// マウスを乗せてるとき
 			if (circle.mouseOver())
-			{
-				color = Palette::Skyblue;
-			}
+			{ color = Palette::Skyblue; }
 
 			// ドラッグしているとき
 			if (trackerForCircle.update(circle.mouseOver()))
@@ -67,7 +64,8 @@ void Main()
 				const auto to   = trackerForLerpCircle.to().value_or(posForLerpCircle);
 
 				// 次の位置を線形補間で計算
-				posForLerpCircle = Math::Lerp(from, to, transitionForLerpCircle.easeOut(EaseInBack));
+				posForLerpCircle
+					= Math::Lerp(from, to, transitionForLerpCircle.easeOut(EaseInBack));
 
 				// ドラッグ終了後でトランジションが終わっていないとき
 				if (not transitionForLerpCircle.isOne())

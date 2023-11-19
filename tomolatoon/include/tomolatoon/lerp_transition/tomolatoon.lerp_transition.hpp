@@ -1,9 +1,6 @@
-﻿module;
-#include <Siv3D.hpp>
+﻿#include <Siv3D.hpp>
 
-export module tomolatoon.lerp_transition;
-
-export namespace tomolatoon
+namespace tomolatoon
 {
 	namespace Arg
 	{

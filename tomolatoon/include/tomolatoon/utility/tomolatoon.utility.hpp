@@ -1,13 +1,10 @@
-﻿module;
-#include <compare>
+﻿#include <compare>
 #include <concepts>
 #include <optional>
 
 #include <Siv3D.hpp>
 
-export module tomolatoon.utility;
-
-export namespace tomolatoon
+namespace tomolatoon
 {
 	template <class T>
 	using Optional = std::optional<T>;
@@ -47,11 +44,9 @@ export namespace tomolatoon
 
 } // namespace tomolatoon
 
-module :private;
-
 namespace tomolatoon
 {
-	bool isURL(FilePathView fp) noexcept {
+	inline bool isURL(FilePathView fp) noexcept {
 		const auto protocol = Array{
 			U"http://"_s,
 			U"https://"_s,
@@ -75,30 +70,30 @@ namespace tomolatoon
 			Vec2 acceleration     = {};
 		} // namespace
 
-		void Update() noexcept {
+		inline void Update() noexcept {
 			previousVelocity = velocity;
 			velocity         = DeltaF() / Scene::DeltaTime();
 
 			acceleration = (velocity - previousVelocity) / Scene::DeltaTime();
 		}
 
-		Point Delta() noexcept {
+		inline Point Delta() noexcept {
 			return s3d::Cursor::Delta();
 		}
 
-		Vec2 DeltaF() noexcept {
+		inline Vec2 DeltaF() noexcept {
 			return s3d::Cursor::DeltaF();
 		}
 
-		Vec2 Velocity() noexcept {
+		inline Vec2 Velocity() noexcept {
 			return velocity;
 		}
 
-		Vec2 PreviousVelocity() noexcept {
+		inline Vec2 PreviousVelocity() noexcept {
 			return previousVelocity;
 		}
 
-		Vec2 Acceleration() noexcept {
+		inline Vec2 Acceleration() noexcept {
 			return acceleration;
 		}
 	} // namespace Cursor

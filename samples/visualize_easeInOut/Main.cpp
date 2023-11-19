@@ -7,14 +7,13 @@
 //  横軸: 割合（0.0～1.0）
 //  縦軸: 値（0.0～1.0、少しはみ出しても大丈夫）
 
-void Main()
-{
+void Main() {
 	Window::Resize(1'755, 810, Centering::Yes);
-	//Scene::SetResizeMode(ResizeMode::Actual);
+	// Scene::SetResizeMode(ResizeMode::Actual);
 
 	// 表示に使いたいイージング関数を指定
-	using EasingFunction          = double (*)(double);
-	EasingFunction easingFunction = EaseInBack;
+	using EasingFunction                         = double (*)(double);
+	EasingFunction                easingFunction = EaseInBack;
 
 	// 本題の s3d::EaseIn, s3d::EaseOut, s3d::EaseInOut
 	Array<double (*)(double f(double), const double t) noexcept> ease{EaseIn, EaseOut, EaseInOut};
@@ -40,7 +39,8 @@ void Main()
 			const auto left = c * size + (c + 1) * xMargin;
 
 			// 図の縦軸について 0.0 ～ 1.0 の部分
-			const auto graph = Rect(Vec2(left, topMargin + extendY).asPoint(), Vec2(size, size).asPoint());
+			const auto graph
+				= Rect(Vec2(left, topMargin + extendY).asPoint(), Vec2(size, size).asPoint());
 
 			// 図の縦軸について 0.0 ～ 1.0 からはみ出す部分
 			const auto background = graph.stretched(0, extendY);
@@ -61,7 +61,11 @@ void Main()
 				const auto x = left + Math::Lerp(0, size, t);
 
 				// 縦軸の表示位置
-				const auto y = Math::Lerp(topMargin + extendY + size, topMargin + extendY, ease[c](easingFunction, t));
+				const auto y = Math::Lerp(
+					topMargin + extendY + size,
+					topMargin + extendY,
+					ease[c](easingFunction, t)
+				);
 
 				// 点を表示する
 				Circle(Vec2(x, y), 3).draw(Palette::Black);
