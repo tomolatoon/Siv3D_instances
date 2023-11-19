@@ -151,6 +151,7 @@
     <ClCompile Include="..\..\..\tomolatoon\module\drag_tracker\tomolatoon.drag_tracker.ixx" />
     <ClCompile Include="..\..\..\tomolatoon\module\iframe\tomolatoon.iframe.ixx" />
     <ClCompile Include="..\..\..\tomolatoon\module\iframe\tomolatoon.iframe.units.ixx" />
+    <ClCompile Include="..\..\..\tomolatoon\module\asset\tomolatoon.asset.ixx" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="App\icon.ico">
